@@ -12,8 +12,5 @@ web-report/
 
 # macOS
 .DS_Store
-.idea/misc.xml
-.idea/modules.xml
-.idea/vcs.xml
-.idea/wishr.iml
-package-lock.json
+
+.idea/*
