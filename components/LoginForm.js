@@ -6,6 +6,7 @@ import {Entypo} from '@expo/vector-icons';
 import Colors from "../constants/colors";
 
 const loginForm = props => {
+    console.log(props);
     return (
         <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
             <View style={styles.loginForm}>
@@ -20,7 +21,16 @@ const loginForm = props => {
                     leftIcon={<Entypo name="lock" size={24} color={Colors.primary}/>}
                     secureTextEntry={true}
                 />
-                <Button buttonStyle={styles.loginButton} type='outline' raised={true} title='Login'/>
+                <Button
+                    buttonStyle={styles.loginButton}
+                    type='outline'
+                    raised={true}
+                    title='Login'
+                    onPress={() => {
+                        /*props.navigation.navigate({routeName: 'Home'})*/
+                        console.log(props);
+                    }}
+                />
                 <View style={styles.signUpContainer}>
                     <Button
                         type='outline'

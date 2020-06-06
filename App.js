@@ -8,6 +8,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import LoginScreen from "./screens/LoginScreen";
 import TextStyle from "./constants/textStyle";
 import Colors from "./constants/colors";
+import AppNavigator from "./navigation/AppNavigator";
 import SignupScreen from "./screens/SignupScreen";
 import HomeScreen from "./screens/HomeScreen";
 import CreateGroupScreen from "./screens/CreateGroupScreen";
@@ -37,23 +38,25 @@ export default function App() {
     }
     return (
         <ThemeProvider theme={theme}>
-            <Header centerComponent={{text: 'Gift Coordination', style: { color: '#fff', fontFamily: 'open-sans-bold',
+            {/*<Header centerComponent={{text: 'Gift Coordination', style: { color: '#fff', fontFamily: 'open-sans-bold',
                     fontSize: 24 }}}
             containerStyle={{
                 backgroundColor: Colors.primary,
                 fontFamily: 'open-sans-bold',
                 fontSize: 24
-            }}/>
-            <View>
-                {/*<LoginScreen/>*/}
-                {/*<SignupScreen/>*/}
-               {/* <HomeScreen/>*/}
-                {/*<CreateGroupScreen/>*/}
-                <CreateEventScreen/>
-                {/*<ViewEventScreen/>*/}
-                {/*<CreateGroupScreen/>*/}
+            }}/>*/}
+            <AppNavigator/>
+{/*            <View>
 
-            </View>
+                <LoginScreen/>
+                <SignupScreen/>
+                <HomeScreen/>
+                <CreateGroupScreen/>
+                <CreateEventScreen/>
+                <ViewEventScreen/>
+                <CreateGroupScreen/>
+
+            </View>*/}
 
         </ThemeProvider>
     );
