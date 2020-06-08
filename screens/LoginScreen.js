@@ -40,43 +40,6 @@ const formReducer = (state, action) => {
     return state;
 };
 const LoginScreen = props => {
-    /*const [isSignUp, setIsSignUp] = useState(false);
-    const dispatch = useDispatch();
-    const [error, setError] = useState();
-
-    const [formState, dispatchFormState] = useReducer(formReducer, {
-        inputValues: {
-            email: '',
-            password: ''
-        },
-        inputValidities: {
-            email: false,
-            password: false
-        },
-        formIsValid: false
-    });
-    const authHandler = () => {
-        let action;
-        if (isSignUp) {
-            action = authActions.signup(formState.inputValues.email, formState.inputValues.password);
-        } else {
-            action = authActions.login(formState.inputValues.email, formState.inputValues.password);
-        }
-        dispatch(action);
-    };
-
-    const inputChangeHandler = useCallback(
-        (inputIdentifier, inputValue, inputValidity) => {
-            dispatchFormState({
-                type: FORM_INPUT_UPDATE,
-                value: inputValue,
-                isValid: inputValidity,
-                input: inputIdentifier
-            });
-        },
-        [dispatchFormState]
-    );*/
-
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState();
     const [isSignup, setIsSignup] = useState(false);
