@@ -26,9 +26,6 @@ const WishListSideMenu = createDrawerNavigator({
     })
 
 const AppNavigator = createStackNavigator({
-
-    Login: LoginScreen,
-    Signup: SignupScreen,
     Home: HomeScreen,
     CreateGroup: CreateGroupScreen,
     CreateEvent: CreateEventScreen,
@@ -82,7 +79,16 @@ const GroupsMainListNavigator = createBottomTabNavigator({
         drawerPosition: 'left',
     }
 )*/
-export default createAppContainer(GroupsMainListNavigator);
+
+const AuthNavigator = createStackNavigator({
+    Auth: LoginScreen
+})
+
+const MainNavigator = createSwitchNavigator({
+    Auth: AuthNavigator,
+    Main: GroupsMainListNavigator
+})
+export default createAppContainer(MainNavigator);
 
 /*
 export default createAppContainer(createSwitchNavigator({
